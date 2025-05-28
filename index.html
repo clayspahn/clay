@@ -78,10 +78,10 @@
       font-family: 'Libre Baskerville', serif;
       cursor: pointer;
     }
-
+    
     .section-title:hover {
-      color: #a0a0a0;
-    }
+  color: #a0a0a0;
+}
 
     .section-content {
       display: none;
@@ -105,36 +105,15 @@
     .extra-spacer {
       margin-bottom: 10em;
     }
-
-    .overlay-img {
-      position: fixed;
-      top: 10px;
-      width: 15vw;
-      height: auto;
-      z-index: 999;
-      pointer-events: none;
-    }
-
-    .img-left {
-      left: 10px;
-    }
-
-    .img-right {
-      right: 10px;
-    }
   </style>
 </head>
 <body>
-  <!-- Overlay Images -->
-  <img src="clayspahn.jpg" alt="Clay Spahn Small" class="overlay-img img-left" />
-  <img src="disc.png" alt="Disc Small" class="overlay-img img-right" />
-
   <div class="container">
     <h1></h1>
 
     <img src="clayspahn.jpg" alt="Clay Spahn" />
 
-    <div class="section-title" onclick="toggleSection(this)">>A<</div>
+    <div class="section-title" onclick="toggleSection(this)">(A)</div>
     <div class="section-content">
       <p><a href="https://www.youtube.com/watch?v=hzXi1jcJH_w" target="_blank">All I Wanted Was You – Paramore</a></p>
       <p><a href="https://www.youtube.com/watch?v=pNx6jAcx6Gw" target="_blank">You Deserve This – Men I Trust</a></p>
@@ -151,7 +130,7 @@
 
     <div class="spacer"></div>
 
-    <div class="section-title" onclick="toggleSection(this)">>B<</div>
+    <div class="section-title" onclick="toggleSection(this)">(B)</div>
     <div class="section-content">
       <p><a href="https://www.youtube.com/watch?v=O7QRlDrjZvc" target="_blank">How Micro-Adventures May Save Your Creativity & Drive – Goth Babe Music</a></p>
       <p><a href="https://www.youtube.com/watch?v=vvG4YLoH5Sc" target="_blank">amaka. live in Toronto – amaka.</a></p>
@@ -164,7 +143,7 @@
 
     <div class="spacer"></div>
 
-    <div class="section-title" onclick="toggleSection(this)">>C<</div>
+    <div class="section-title" onclick="toggleSection(this)">(C)</div>
     <div class="section-content">
       <p>Ceramics</p>
       <p>Cowhide and leathergoods</p>
@@ -181,7 +160,7 @@
 
     <div class="spacer"></div>
 
-    <div class="section-title" onclick="toggleSection(this)">>D<</div>
+    <div class="section-title" onclick="toggleSection(this)">(D)</div>
     <div class="section-content">
       <p><a href="https://instagram.com/bled.studio" target="_blank">@bled.studio</a></p>
       <p><a href="https://instagram.com/arkbain" target="_blank">@arkbain</a></p>
@@ -192,24 +171,13 @@
     <div class="spacer"></div>
     <img src="disc.png" alt="Rome Disc" />
     <div class="spacer"></div>
-  </div>
+
 
   <script>
-  function toggleSection(titleElement) {
-    const content = titleElement.nextElementSibling;
-    const isOpen = content.classList.toggle('open');
-
-    // Extract the current letter inside the section title
-    const letter = titleElement.textContent.replace(/[()>]/g, '').trim();
-
-    // Change the title text based on whether it's open or closed
-    if (isOpen) {
-      titleElement.textContent = `(${letter})`;
-    } else {
-      titleElement.textContent = `>${letter}<`;
+    function toggleSection(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.classList.toggle('open');
     }
-  }
-</script>
-
+  </script>
 </body>
 </html>
