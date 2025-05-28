@@ -60,6 +60,7 @@
       letter-spacing: -0.04em;
       font-family: 'Libre Baskerville', serif;
     }
+
     a:hover {
       color: #a0a0a0;
     }
@@ -70,11 +71,21 @@
 
     .section-title {
       margin-top: 3em;
-      margin-bottom: 2em;
+      margin-bottom: 1em;
       font-weight: 400;
       letter-spacing: -0.04em;
       text-transform: uppercase;
       font-family: 'Libre Baskerville', serif;
+      cursor: pointer;
+    }
+
+    .section-content {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .section-content.open {
+      display: block;
     }
 
     .index-text {
@@ -98,52 +109,60 @@
 
     <img src="clayspahn.jpg" alt="Clay Spahn" />
 
-    <div class="section-title">(A)</div>
-    <p><a href="https://www.youtube.com/watch?v=hzXi1jcJH_w" target="_blank">All I Wanted Was You – Paramore</a></p>
-    <p><a href="https://www.youtube.com/watch?v=pNx6jAcx6Gw" target="_blank">You Deserve This – Men I Trust</a></p>
-    <p><a href="https://www.youtube.com/watch?v=z-mxBDuRaZ8" target="_blank">Lazy Eye – Silversun Pickups</a></p>
-    <p><a href="https://www.youtube.com/watch?v=_9hkXCYiEjc" target="_blank">No One Noticed – The Marías</a></p>
-    <p><a href="https://www.youtube.com/watch?v=eKiiFBY5MYI" target="_blank">Consider Your Position – Train Breaks Down</a></p>
-    <p><a href="https://www.youtube.com/watch?v=mtNQ_XmmoNI" target="_blank">A Trophy Father's Trophy Son – Sleeping With Sirens</a></p>
-    <p><a href="https://www.youtube.com/watch?v=h-Udboe6n5I" target="_blank">Horizon – Nujabes</a></p>
-    <p><a href="https://www.youtube.com/watch?v=clqsYJfQ6GQ" target="_blank">Witchy Woman – Eagles</a></p>
-    <p><a href="https://www.youtube.com/watch?v=4gT63xovuWE" target="_blank">Since I've Been Loving You – Led Zeppelin</a></p>
-    <p><a href="https://www.youtube.com/watch?v=bZrPfq15yJ4" target="_blank">Covet – Basement</a></p>
-    <p><a href="https://www.youtube.com/watch?v=W86Kpcc9XQ0" target="_blank">I Need You – Lynyrd Skynyrd</a></p>
+    <div class="section-title" onclick="toggleSection(this)">(A)</div>
+    <div class="section-content">
+      <p><a href="https://www.youtube.com/watch?v=hzXi1jcJH_w" target="_blank">All I Wanted Was You – Paramore</a></p>
+      <p><a href="https://www.youtube.com/watch?v=pNx6jAcx6Gw" target="_blank">You Deserve This – Men I Trust</a></p>
+      <p><a href="https://www.youtube.com/watch?v=z-mxBDuRaZ8" target="_blank">Lazy Eye – Silversun Pickups</a></p>
+      <p><a href="https://www.youtube.com/watch?v=_9hkXCYiEjc" target="_blank">No One Noticed – The Marías</a></p>
+      <p><a href="https://www.youtube.com/watch?v=eKiiFBY5MYI" target="_blank">Consider Your Position – Train Breaks Down</a></p>
+      <p><a href="https://www.youtube.com/watch?v=mtNQ_XmmoNI" target="_blank">A Trophy Father's Trophy Son – Sleeping With Sirens</a></p>
+      <p><a href="https://www.youtube.com/watch?v=h-Udboe6n5I" target="_blank">Horizon – Nujabes</a></p>
+      <p><a href="https://www.youtube.com/watch?v=clqsYJfQ6GQ" target="_blank">Witchy Woman – Eagles</a></p>
+      <p><a href="https://www.youtube.com/watch?v=4gT63xovuWE" target="_blank">Since I've Been Loving You – Led Zeppelin</a></p>
+      <p><a href="https://www.youtube.com/watch?v=bZrPfq15yJ4" target="_blank">Covet – Basement</a></p>
+      <p><a href="https://www.youtube.com/watch?v=W86Kpcc9XQ0" target="_blank">I Need You – Lynyrd Skynyrd</a></p>
+    </div>
 
     <div class="spacer"></div>
 
-    <div class="section-title">(B)</div>
-    <p><a href="https://www.youtube.com/watch?v=O7QRlDrjZvc" target="_blank">How Micro-Adventures May Save Your Creativity & Drive – Goth Babe Music</a></p>
-    <p><a href="https://www.youtube.com/watch?v=vvG4YLoH5Sc" target="_blank">amaka. live in Toronto – amaka.</a></p>
-    <p><a href="https://www.youtube.com/watch?v=0nmARw8tElw" target="_blank">Mellow Soul｜Soul & Funk Vinyl Set – 見本盤Mihon Reko</a></p>
-    <p><a href="https://www.youtube.com/watch?v=SiLDPSZGVl8" target="_blank">Riding to Born Free 13 on Choppers</a></p>
-    <p><a href="https://www.youtube.com/watch?v=xGIat8XiHO8" target="_blank">Graphic Designer Reacts to Your Incredible Design Portfolios – Jesse Nyberg</a></p>
-    <p><a href="https://www.youtube.com/watch?v=MicId9DMESM" target="_blank">A Week in My Life as the Creative Director of Elwood – Justin Saul</a></p>
-    <p><a href="https://www.youtube.com/watch?v=gG-TGwWp3mo" target="_blank">Jerry Hsu on Leaving Skateboarding for Photography – Mojo</a></p>
+    <div class="section-title" onclick="toggleSection(this)">(B)</div>
+    <div class="section-content">
+      <p><a href="https://www.youtube.com/watch?v=O7QRlDrjZvc" target="_blank">How Micro-Adventures May Save Your Creativity & Drive – Goth Babe Music</a></p>
+      <p><a href="https://www.youtube.com/watch?v=vvG4YLoH5Sc" target="_blank">amaka. live in Toronto – amaka.</a></p>
+      <p><a href="https://www.youtube.com/watch?v=0nmARw8tElw" target="_blank">Mellow Soul｜Soul & Funk Vinyl Set – 見本盤Mihon Reko</a></p>
+      <p><a href="https://www.youtube.com/watch?v=SiLDPSZGVl8" target="_blank">Riding to Born Free 13 on Choppers</a></p>
+      <p><a href="https://www.youtube.com/watch?v=xGIat8XiHO8" target="_blank">Graphic Designer Reacts to Your Incredible Design Portfolios – Jesse Nyberg</a></p>
+      <p><a href="https://www.youtube.com/watch?v=MicId9DMESM" target="_blank">A Week in My Life as the Creative Director of Elwood – Justin Saul</a></p>
+      <p><a href="https://www.youtube.com/watch?v=gG-TGwWp3mo" target="_blank">Jerry Hsu on Leaving Skateboarding for Photography</a></p>
+    </div>
 
     <div class="spacer"></div>
 
-    <div class="section-title">(C)</div>
-    <p>Ceramics</p>
-    <p>Cowhide and leathergoods</p>
-    <p>Painting</p>
-    <p>Ornate design</p>
-    <p>Porsche 911</p>
-    <p>Ascots</p>
-    <p>1940’s vintage sportwear</p>
-    <p>Tokyo architecture</p>
-    <p>Aluminum / Steel</p>
-    <p>Stamps</p>
-    <p>Old rugs</p>
+    <div class="section-title" onclick="toggleSection(this)">(C)</div>
+    <div class="section-content">
+      <p>Ceramics</p>
+      <p>Cowhide and leathergoods</p>
+      <p>Painting</p>
+      <p>Ornate design</p>
+      <p>Porsche 911</p>
+      <p>Ascots</p>
+      <p>1940’s vintage sportwear</p>
+      <p>Tokyo architecture</p>
+      <p>Aluminum / Steel</p>
+      <p>Stamps</p>
+      <p>Old rugs</p>
+    </div>
 
     <div class="spacer"></div>
 
-    <div class="section-title">(D)</div>
-    <p><a href="https://instagram.com/bled.studio" target="_blank">@bled.studio</a></p>
-    <p><a href="https://instagram.com/arkbain" target="_blank">@arkbain</a></p>
-    <p><a href="https://instagram.com/typicatype" target="_blank">@typicatype</a></p>
-    <p><a href="https://instagram.com/saltstoneearth" target="_blank">@saltstoneearth</a></p>
+    <div class="section-title" onclick="toggleSection(this)">(D)</div>
+    <div class="section-content">
+      <p><a href="https://instagram.com/bled.studio" target="_blank">@bled.studio</a></p>
+      <p><a href="https://instagram.com/arkbain" target="_blank">@arkbain</a></p>
+      <p><a href="https://instagram.com/typicatype" target="_blank">@typicatype</a></p>
+      <p><a href="https://instagram.com/saltstoneearth" target="_blank">@saltstoneearth</a></p>
+    </div>
 
     <div class="spacer"></div>
     <img src="disc.png" alt="Rome Disc" />
@@ -162,5 +181,12 @@
       CS
     </p>
   </div>
+
+  <script>
+    function toggleSection(titleElement) {
+      const content = titleElement.nextElementSibling;
+      content.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
