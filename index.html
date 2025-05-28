@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CLAY SPAHN</title>
   <style>
+    @import url('https://cdn.jsdelivr.net/npm/@vercel/font@latest/geist/Geist.css');
+    @import url('https://cdn.jsdelivr.net/npm/@vercel/font@latest/geist-mono/GeistMono.css');
+
     * {
       box-sizing: border-box;
     }
@@ -12,11 +15,11 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: Helvetica, Arial, sans-serif;
+      font-family: 'Geist', sans-serif;
       font-weight: bold;
       font-size: 12pt;
-      color: #f5f5f5; /* off-white */
-      background-color: #111; /* off-black */
+      color: #f5f5f5;
+      background-color: #111;
       line-height: 1.2;
       letter-spacing: -0.25px;
       text-align: center;
@@ -67,6 +70,15 @@
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: -0.25px;
+    }
+
+    .index-text {
+      font-family: 'Geist Mono', monospace;
+      font-size: 10pt;
+      color: #aaa;
+      text-align: left;
+      padding: 0 20px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -122,25 +134,24 @@
     <p><a href="https://instagram.com/saltstoneearth" target="_blank">@saltstoneearth</a></p>
 
     <div class="spacer"></div>
-    
     <img src="disc.png" alt="Rome Disc" />
     <div class="spacer"></div>
 
     <p>"I want to touch people with my art. I want them to say: he feels deeply, he feels tenderly." – Vincent van Gogh</p>
-    
+
     <div class="spacer"></div>
     <div class="spacer"></div>
-<div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div> <!-- Additional spacer added here -->
 
-<p style="text-align: left; padding: 0 20px;">
-  (A) listening<br>
-  (B) watching<br>
-  (C) tastes<br>
-  (D) dreams<br><br>
-  (A), (B), (D) = clickable links<br><br>
-  CS
-</p>
-
+    <p class="index-text">
+      (A) listening<br>
+      (B) watching<br>
+      (C) tastes<br>
+      (D) dreams<br><br>
+      (A), (B), (D) = clickable links<br><br>
+      CS
+    </p>
   </div>
 </body>
 </html>
