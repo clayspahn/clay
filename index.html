@@ -78,10 +78,10 @@
       font-family: 'Libre Baskerville', serif;
       cursor: pointer;
     }
-    
+
     .section-title:hover {
-  color: #a0a0a0;
-}
+      color: #a0a0a0;
+    }
 
     .section-content {
       display: none;
@@ -105,9 +105,30 @@
     .extra-spacer {
       margin-bottom: 10em;
     }
+
+    .overlay-img {
+      position: fixed;
+      top: 10px;
+      width: 5vw;
+      height: auto;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .img-left {
+      left: 10px;
+    }
+
+    .img-right {
+      right: 10px;
+    }
   </style>
 </head>
 <body>
+  <!-- Overlay Images -->
+  <img src="clayspahn.jpg" alt="Clay Spahn Small" class="overlay-img img-left" />
+  <img src="disc.png" alt="Disc Small" class="overlay-img img-right" />
+
   <div class="container">
     <h1></h1>
 
@@ -171,7 +192,7 @@
     <div class="spacer"></div>
     <img src="disc.png" alt="Rome Disc" />
     <div class="spacer"></div>
-
+  </div>
 
   <script>
     function toggleSection(titleElement) {
