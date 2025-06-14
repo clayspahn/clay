@@ -14,8 +14,8 @@
       padding: 0;
       font-family: 'Times New Roman', serif;
       font-size: 14pt;
-      color: #f5f5f5;
-      background-color: #111;
+      color: #000;
+      background-color: #f8f8f8;
       line-height: 1.5;
       text-align: left;
     }
@@ -24,33 +24,32 @@
       width: 100%;
       max-width: 500px;
       padding: 40px 20px;
-    }
-
-    .header {
-      padding-left: 20px;
+      margin: 0 auto;
     }
 
     .footer {
-      display: flex;
-      justify-content: space-between;
       width: 100%;
       padding: 20px;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      background-color: #111;
+      background-color: #f8f8f8;
       box-sizing: border-box;
     }
 
     .footer img {
-      width: calc(50% - 10px);
+      width: 50%;
+      max-width: 100%;
       height: auto;
-      object-fit: cover;
+      display: block;
+      margin: 0 auto;
     }
 
-    .sections {
-      padding-left: 20px;
-      margin-bottom: 80px;
+    @media (max-width: 768px) {
+      .footer img {
+        width: 100%;
+      }
+    }
+
+    .section-controls {
+      padding: 20px;
     }
 
     .section-title {
@@ -60,7 +59,7 @@
     }
 
     .section-title:hover {
-      color: #a0a0a0;
+      color: gray;
     }
 
     .section-content {
@@ -74,12 +73,12 @@
 
     p, a {
       margin: 0 0 0.5em 0;
-      color: #f5f5f5;
+      color: #000;
       text-decoration: none;
     }
 
     a:hover {
-      color: #a0a0a0;
+      color: gray;
     }
 
     .spacer {
@@ -88,7 +87,8 @@
   </style>
 </head>
 <body>
-  <div class="container header">
+
+  <div class="container">
     <p>Clay Spahn</p>
     <p>Designer, creative director, USA</p>
     <p>...creates brands, books, and typefaces.</p>
@@ -101,50 +101,15 @@
     <p>clayspahn.com</p>
     <p>563 231 6155 call, text Mon––Fri</p>
     <p>-</p>
-  </div>
 
-  <div class="sections">
-    <div>
-      <span class="section-title" onclick="toggleSection(this)">(A)</span>
-      <span class="section-title" onclick="toggleSection(this)">(B)</span>
-      <span class="section-title" onclick="toggleSection(this)">(C)</span>
-      <span class="section-title" onclick="toggleSection(this)">(D)</span>
-    </div>
+  
 
-    <div class="section-content">
-      <p><a href="https://www.youtube.com/watch?v=hzXi1jcJH_w" target="_blank">All I Wanted Was You – Paramore</a></p>
-      <!-- ... Add remaining A links ... -->
-    </div>
-
-    <div class="section-content">
-      <p><a href="https://www.youtube.com/watch?v=O7QRlDrjZvc" target="_blank">How Micro-Adventures May Save Your Creativity & Drive – Goth Babe Music</a></p>
-      <!-- ... Add remaining B links ... -->
-    </div>
-
-    <div class="section-content">
-      <p>Ceramics</p>
-      <p>Cowhide and leathergoods</p>
-      <!-- ... Add remaining C items ... -->
-    </div>
-
-    <div class="section-content">
-      <p><a href="https://instagram.com/bled.studio" target="_blank">@bled.studio</a></p>
-      <!-- ... Add remaining D links ... -->
-    </div>
+    <div class="spacer"></div>
   </div>
 
   <div class="footer">
     <img src="clayspahn.jpg" alt="Clay Spahn" />
-    <img src="disc.png" alt="Rome Disc" />
   </div>
-
-  <script>
-    function toggleSection(el) {
-      const sections = document.querySelectorAll('.section-title');
-      const contents = document.querySelectorAll('.section-content');
-      const index = Array.from(sections).indexOf(el);
-      contents[index].classList.toggle('open');
     }
-  </script>
 </body>
 </html>
