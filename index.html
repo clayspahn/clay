@@ -21,9 +21,13 @@
     }
 
     p, a {
-      margin: 0 0 0.5em 0;
+      margin: 0;
       color: #000;
       text-decoration: none;
+    }
+
+    .spaced {
+      margin-bottom: 1em;
     }
 
     a:hover {
@@ -38,6 +42,10 @@
     }
 
     @media (max-width: 768px) {
+      html, body {
+        padding: 10px;
+      }
+
       .footer img {
         width: 100%;
       }
@@ -46,23 +54,18 @@
 </head>
 <body>
 
-  <p>Clay Spahn</p>
-  <p>Designer, creative director, USA</p>
-    <br />
-    <br />
-  <p>...creates brands, books, and typefaces.</p>
-  <br />
-    <br />
-  <p>Bled™ Studio</p>
-  <p>Typica Type</p>
-  <p>3mm</p>
-  <br />
-    <br />
-  <p>@clayspahn</p>
-  <p>clayspahn.com</p>
-  <p>563 231 6155 call, text Mon––Fri</p>
-    <br />
-    <br />
+  <p class="spaced">Clay Spahn</p>
+  <p class="spaced">Designer, creative director, USA</p>
+
+  <p class="spaced">...creates brands, books, and typefaces.</p>
+
+  <p class="spaced">Bled™ Studio</p>
+  <p class="spaced">Typica Type</p>
+  <p class="spaced">3mm</p>
+
+  <p class="spaced">@clayspahn</p>
+  <p class="spaced">clayspahn.com</p>
+  <p class="spaced">563 231 6155 call, text Mon––Fri</p>
 
   <div class="footer">
     <img src="clayspahn.jpg" alt="Clay Spahn" />
@@ -70,4 +73,3 @@
 
 </body>
 </html>
-
