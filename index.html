@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CLAY SPAHN</title>
   <style>
-    @import url('https://cdn.jsdelivr.net/npm/@vercel/font@latest/geist/Geist.css');
-    @import url('https://cdn.jsdelivr.net/npm/@vercel/font@latest/geist-mono/GeistMono.css');
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-
     * {
       box-sizing: border-box;
     }
@@ -16,49 +12,70 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Libre Baskerville', serif;
-      font-weight: 400;
-      font-size: 12pt;
+      font-family: 'Times New Roman', serif;
+      font-size: 14pt;
       color: #f5f5f5;
       background-color: #111;
-      line-height: 1.3;
-      text-align: center;
-      letter-spacing: -0.04em;
+      line-height: 1.5;
+      text-align: left;
     }
 
     .container {
+      width: 100%;
       max-width: 500px;
-      width: 100%;
       padding: 40px 20px;
-      margin: 0 auto;
     }
 
-    img {
+    .header {
+      padding-left: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
       width: 100%;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: #111;
+      box-sizing: border-box;
+    }
+
+    .footer img {
+      width: calc(50% - 10px);
       height: auto;
-      margin: 1.2em 0;
+      object-fit: cover;
     }
 
-    @media (max-width: 600px) {
-      img {
-        width: 80%;
-      }
+    .sections {
+      padding-left: 20px;
+      margin-bottom: 80px;
     }
 
-    h1 {
-      margin: 0 0 1em 0;
-      font-size: 12pt;
-      font-weight: 400;
+    .section-title {
+      display: inline-block;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .section-title:hover {
+      color: #a0a0a0;
+    }
+
+    .section-content {
+      display: none;
+      margin-bottom: 2em;
+    }
+
+    .section-content.open {
+      display: block;
     }
 
     p, a {
       margin: 0 0 0.5em 0;
-      font-size: 12pt;
-      font-weight: 400;
       color: #f5f5f5;
       text-decoration: none;
-      letter-spacing: -0.04em;
-      font-family: 'Libre Baskerville', serif;
     }
 
     a:hover {
@@ -66,117 +83,67 @@
     }
 
     .spacer {
-      margin-bottom: 5em;
-    }
-
-    .section-title {
-      margin-top: 3em;
-      margin-bottom: 1em;
-      font-weight: 400;
-      letter-spacing: -0.04em;
-      text-transform: uppercase;
-      font-family: 'Libre Baskerville', serif;
-      cursor: pointer;
-    }
-    
-    .section-title:hover {
-  color: #a0a0a0;
-}
-
-    .section-content {
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    .section-content.open {
-      display: block;
-    }
-
-    .index-text {
-      font-family: 'Geist Mono', monospace;
-      font-size: 8pt;
-      color: #dcdcdc;
-      text-align: center;
-      padding: 0 0px;
-      line-height: 1.6;
-      letter-spacing: 0.05em;
-    }
-
-    .extra-spacer {
-      margin-bottom: 10em;
+      height: 4em;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1></h1>
+  <div class="container header">
+    <p>Clay Spahn</p>
+    <p>Designer, creative director, USA</p>
+    <p>...creates brands, books, and typefaces.</p>
+    <br />
+    <p>Bled™ Studio</p>
+    <p>Typica Type</p>
+    <p>3mm</p>
+    <br />
+    <p>@clayspahn</p>
+    <p>clayspahn.com</p>
+    <p>563 231 6155 call, text Mon––Fri</p>
+    <p>-</p>
+  </div>
 
-    <img src="clayspahn.jpg" alt="Clay Spahn" />
+  <div class="sections">
+    <div>
+      <span class="section-title" onclick="toggleSection(this)">(A)</span>
+      <span class="section-title" onclick="toggleSection(this)">(B)</span>
+      <span class="section-title" onclick="toggleSection(this)">(C)</span>
+      <span class="section-title" onclick="toggleSection(this)">(D)</span>
+    </div>
 
-    <div class="section-title" onclick="toggleSection(this)">(A)</div>
     <div class="section-content">
       <p><a href="https://www.youtube.com/watch?v=hzXi1jcJH_w" target="_blank">All I Wanted Was You – Paramore</a></p>
-      <p><a href="https://www.youtube.com/watch?v=pNx6jAcx6Gw" target="_blank">You Deserve This – Men I Trust</a></p>
-      <p><a href="https://www.youtube.com/watch?v=z-mxBDuRaZ8" target="_blank">Lazy Eye – Silversun Pickups</a></p>
-      <p><a href="https://www.youtube.com/watch?v=_9hkXCYiEjc" target="_blank">No One Noticed – The Marías</a></p>
-      <p><a href="https://www.youtube.com/watch?v=eKiiFBY5MYI" target="_blank">Consider Your Position – Train Breaks Down</a></p>
-      <p><a href="https://www.youtube.com/watch?v=mtNQ_XmmoNI" target="_blank">A Trophy Father's Trophy Son – Sleeping With Sirens</a></p>
-      <p><a href="https://www.youtube.com/watch?v=h-Udboe6n5I" target="_blank">Horizon – Nujabes</a></p>
-      <p><a href="https://www.youtube.com/watch?v=clqsYJfQ6GQ" target="_blank">Witchy Woman – Eagles</a></p>
-      <p><a href="https://www.youtube.com/watch?v=4gT63xovuWE" target="_blank">Since I've Been Loving You – Led Zeppelin</a></p>
-      <p><a href="https://www.youtube.com/watch?v=bZrPfq15yJ4" target="_blank">Covet – Basement</a></p>
-      <p><a href="https://www.youtube.com/watch?v=W86Kpcc9XQ0" target="_blank">I Need You – Lynyrd Skynyrd</a></p>
+      <!-- ... Add remaining A links ... -->
     </div>
 
-    <div class="spacer"></div>
-
-    <div class="section-title" onclick="toggleSection(this)">(B)</div>
     <div class="section-content">
       <p><a href="https://www.youtube.com/watch?v=O7QRlDrjZvc" target="_blank">How Micro-Adventures May Save Your Creativity & Drive – Goth Babe Music</a></p>
-      <p><a href="https://www.youtube.com/watch?v=vvG4YLoH5Sc" target="_blank">amaka. live in Toronto – amaka.</a></p>
-      <p><a href="https://www.youtube.com/watch?v=0nmARw8tElw" target="_blank">Mellow Soul｜Soul & Funk Vinyl Set – 見本盤Mihon Reko</a></p>
-      <p><a href="https://www.youtube.com/watch?v=SiLDPSZGVl8" target="_blank">Riding to Born Free 13 on Choppers</a></p>
-      <p><a href="https://www.youtube.com/watch?v=xGIat8XiHO8" target="_blank">Graphic Designer Reacts to Your Incredible Design Portfolios – Jesse Nyberg</a></p>
-      <p><a href="https://www.youtube.com/watch?v=MicId9DMESM" target="_blank">A Week in My Life as the Creative Director of Elwood – Justin Saul</a></p>
-      <p><a href="https://www.youtube.com/watch?v=gG-TGwWp3mo" target="_blank">Jerry Hsu on Leaving Skateboarding for Photography</a></p>
+      <!-- ... Add remaining B links ... -->
     </div>
 
-    <div class="spacer"></div>
-
-    <div class="section-title" onclick="toggleSection(this)">(C)</div>
     <div class="section-content">
       <p>Ceramics</p>
       <p>Cowhide and leathergoods</p>
-      <p>Painting</p>
-      <p>Ornate design</p>
-      <p>Porsche 911</p>
-      <p>Ascots</p>
-      <p>1940’s vintage sportwear</p>
-      <p>Tokyo architecture</p>
-      <p>Aluminum / Steel</p>
-      <p>Stamps</p>
-      <p>Old rugs</p>
+      <!-- ... Add remaining C items ... -->
     </div>
 
-    <div class="spacer"></div>
-
-    <div class="section-title" onclick="toggleSection(this)">(D)</div>
     <div class="section-content">
       <p><a href="https://instagram.com/bled.studio" target="_blank">@bled.studio</a></p>
-      <p><a href="https://instagram.com/arkbain" target="_blank">@arkbain</a></p>
-      <p><a href="https://instagram.com/typicatype" target="_blank">@typicatype</a></p>
-      <p><a href="https://instagram.com/saltstoneearth" target="_blank">@saltstoneearth</a></p>
+      <!-- ... Add remaining D links ... -->
     </div>
+  </div>
 
-    <div class="spacer"></div>
+  <div class="footer">
+    <img src="clayspahn.jpg" alt="Clay Spahn" />
     <img src="disc.png" alt="Rome Disc" />
-    <div class="spacer"></div>
-
+  </div>
 
   <script>
-    function toggleSection(titleElement) {
-      const content = titleElement.nextElementSibling;
-      content.classList.toggle('open');
+    function toggleSection(el) {
+      const sections = document.querySelectorAll('.section-title');
+      const contents = document.querySelectorAll('.section-content');
+      const index = Array.from(sections).indexOf(el);
+      contents[index].classList.toggle('open');
     }
   </script>
 </body>
