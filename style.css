@@ -1,0 +1,10 @@
+/* HIGHLIGHTS */
+::selection {
+  background: #ffeb3b; /* highlighter yellow */
+  color: #000;
+}
+
+::-moz-selection {
+  background: #ffeb3b;
+  color: #000;
+}
